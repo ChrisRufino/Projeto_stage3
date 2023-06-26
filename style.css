@@ -65,14 +65,12 @@ fieldset legend {
 .input-wrapper {
   display: flex;
   flex-direction: column;
-
 }
 .input-wrapper label {
   color: #4e4958;
   font-size: 14px;
   line-height: 24px;
-  margin-left: 64px;
-  margin-bottom: 8px;
+  margin: 24px 64px 8px;
 }
 .input-wrapper label span {
   margin-left: 12px;
