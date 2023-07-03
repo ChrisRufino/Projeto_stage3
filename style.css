@@ -85,8 +85,6 @@ fieldset legend {
   color: #4e4958;
   font-size: 14px;
   line-height: 24px;
-
-  margin-bottom: 8px;
 }
 .input-wrapper label span {
   margin-left: 12px;
@@ -134,8 +132,8 @@ fieldset legend {
   width: 100%;
 }
 
-.checkbox-wrapper input {
-  display: none;
+.checkbox-wrappe {
+  position: relative;
 }
 
 .checkbox-wrapper label {
@@ -144,6 +142,14 @@ fieldset legend {
   gap: 16px;
 
   margin: 0;
+}
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
 }
 .checkbox-wrapper label::before {
   content: '';
@@ -154,4 +160,13 @@ fieldset legend {
 
   border: 1px solid #e6e6f0;
   border-radius: 8px;
+}
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
 }
